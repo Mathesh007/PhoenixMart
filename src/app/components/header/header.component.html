@@ -1,0 +1,40 @@
+<mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
+    <a routerLink="home">Phoenix Mart</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon [matBadge]="3" matBadgeColor="warn">shopping_cart</mat-icon>
+    </button>
+    <mat-menu class="w-64" #menu="matMenu">
+        <div class="p-3 divide-y divide-solid">
+            <div class="pb-3 flex justify-between">
+                <span class="mr-16">3 Items</span>
+                <a routerLinks="cart">View cart</a>
+            </div>
+            <div class="py-3">
+                <div class="flex justify-between font-light mb-2">
+                    Television x 1
+                    <span class="font-bold">{{'150000'|currency:"INR"}}</span>
+                </div>
+                <div class="flex justify-between font-light mb-2">
+                    Fridge x 1
+                    <span class="font-bold">{{'25000'|currency:"INR"}}</span>
+                </div>
+                <div class="flex justify-between font-light mb-2">
+                    Washing Machine x 1
+                    <span class="font-bold">{{'30000'|currency:"INR"}}</span>
+                </div>
+                <div class="flex justify-between py-3 font-light">
+                    Total
+                    <span class="font-bold">{{'205000'|currency:"INR"}}</span>
+                </div>
+                <div class="flex justify-between py-3 px-3">
+                    <button class="bg-rose-600 rounded-full w-9 h-9">
+                        <mat-icon>remove_shopping_cart</mat-icon>
+                    </button>
+                    <button class="bg-green-600 rounded-full w-9 h-9">
+                        <mat-icon>shopping_cart</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-menu>
+</mat-toolbar>
